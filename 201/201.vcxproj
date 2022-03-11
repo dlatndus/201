@@ -19,11 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C기본\04.c" />
-    <ClCompile Include="C기본\04함수의 선언과 정의.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="C기본\04.h" />
+    <ClCompile Include="C기본\05논리연산자.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
