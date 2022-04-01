@@ -12,7 +12,3 @@ int main(void) {
 	jungjuk(); //1
 	jungjuk(); //2
 }
-
-
-
-
