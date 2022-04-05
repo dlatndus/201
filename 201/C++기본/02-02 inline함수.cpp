@@ -16,10 +16,11 @@ inline int jegob(int a)
 {
 	return a * a;
 }
-
 int main(void) {
 
 	cout << jegob(3) << endl;
+
+
 
 	return 0;
 }
