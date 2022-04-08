@@ -7,13 +7,13 @@ using namespace std;
 
 int main(void) {
 
-	char cMunja[20];
+	char cMunja[20];//정적배열
 	strcpy(cMunja, "c_insert");	//c_insert
 	strcat(cMunja, "++");		//c_insert++
 	printf("%s\n", cMunja);
 
 	//주의사항 "cpp_insert" + "++"; 하면 에러발생
-	string cppMunja; //using 써서 안써도 오류 안남
+	string cppMunja; //using 써서 안써도 오류 안남, 동적배열
 	cppMunja = "cpp_insert";	//cpp_insert
 	cppMunja = cppMunja + "++";	//cpp_insert++
 	cout << cppMunja << endl;
