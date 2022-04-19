@@ -14,5 +14,5 @@ int main(void)
 
 	string cppl = "aaa", cppJ = "aaa", cppK = "abc";
 	cout << (cppl == cppJ) << endl;	//같을 글자
-	cout << (cppl == cppK) << endl;	//사전순 aaa -> abc
+	cout << (cppl < cppK) << endl;	//사전순 aaa -> abc
 }

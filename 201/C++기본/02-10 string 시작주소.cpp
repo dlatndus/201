@@ -8,10 +8,17 @@ using namespace std;
 
 int main(void)
 {
+	char c[9];
+	strcpy(c, "asdfqwer");
+	strcat(c, "++");
+	printf("%s\n", c);
+
+	/*
 	char cI[] = "aaa";
 	printf("%s \n", cI); //aaa
 
 	string cppl = "aaa";
 	printf("%s \n", cppl.c_str()); //aaa
 	cout << cppl.c_str() << endl;
+	*/
 }
