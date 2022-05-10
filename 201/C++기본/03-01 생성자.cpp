@@ -18,15 +18,17 @@ public:
 
 };
 student::student() {
-	nHakbun = 1234;
-	sName = "이사랑";
+	this -> nHakbun = 1234;
+	this -> sName = "이사랑";
 	cout << "학번이 등록되었습니다." << endl;
 
 }
+//멤버변수를 초기화 할 수 있으며 따라서
+//const형 변수와 참조형 변수를 멤버변수로 할 수 있다
+
 student::student(int Hakbun, string Name)
+	:nHakbun(Hakbun), sName(Name) //멤버변수(매개변수)
 {
-	nHakbun = Hakbun;
-	sName = Name;
 	cout << "학번이 등록되었습니다." << endl;
 }
 
@@ -42,3 +44,5 @@ int main(void) {
 	stu2.show();
 }
 
+//this는 객체 자기자신을 가르킴
+//rkskekfkakqktkdkwkckzkxkvkgkgkgkgkgkgkgkgkgkgkgkgkgkgkea;;;d jkd d  kad     kdd ajjjjjf lkfllfk jallllllllld 
