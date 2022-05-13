@@ -42,13 +42,18 @@ void Student::show()
 
 int main(void)
 {
-	Student stu1 = Student();
-	stu1.show();
+	//Student stu1 = Student();
+	//stu1.show();
 
-	Student stu2 = Student(1111, "JWP");
-	stu2.show();
+	//Student stu2 = Student(1111, "JWP");
+	//stu2.show();
 
+	int* ptr1 = new int;
+	*ptr1 = 20;
+	cout << *ptr1 << endl;
 
+	delete ptr1;
 
+	return 0;
 }
 
