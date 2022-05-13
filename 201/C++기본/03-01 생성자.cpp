@@ -37,12 +37,19 @@ void student::show() {
 	cout << "이름은" << sName << "입니다" << endl << endl;
 }
 int main(void) {
-	student stu1 = student();
+	/*student stu1 = student();
 	stu1.show();
 
-	student stu2 = student(1111, "JWP");
-	stu2.show();
+	student stu2 = student(1111, "jwp");
+	stu2.show();*/
+
+	int *ptr1 = new int;
+	*ptr1 = 20;
+	cout << ptr1 << endl <<  *ptr1 << endl;
+	
+	delete ptr1;
+
+	return 0;
 }
 
 //this는 객체 자기자신을 가르킴
-//rkskekfkakqktkdkwkckzkxkvkgkgkgkgkgkgkgkgkgkgkgkgkgkgkea;;;d jkd d  kad     kdd ajjjjjf lkfllfk jallllllllld 
