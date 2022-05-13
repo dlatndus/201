@@ -39,9 +39,11 @@ void student::show() {
 int main(void) {
 	/*student stu1 = student();
 	stu1.show();
+	*/
 
-	student stu2 = student(1111, "jwp");
-	stu2.show();*/
+	student* stu2 = new student(1111, "jwp");
+	stu2->show();
+	delete stu2;
 
 	/*int *ptr1 = new int;
 	*ptr1 = 20;
@@ -49,13 +51,13 @@ int main(void) {
 	
 	delete ptr1;*/
 
-	int* ptr2 = new int[4];
+	/*int* ptr2 = new int[4];
 	for (int i = 0; i < 4; i++)
 	{
 		ptr2[i] = 10 + i;
 		cout << ptr2[i] << " ";
 	}
-	delete []ptr2;
+	delete []ptr2;*/
 
 
 	return 0;
