@@ -13,6 +13,7 @@ public:
 	//반환형을 갖고있지 않는다.
 	student();
 	student(int Hakbun, const char* Name);
+	student(const student& rhs);
 	~student();
 
 	void show();
@@ -34,6 +35,12 @@ student::student(int Hakbun, const char* Name)
 	strcpy(sName, Name);
 }
 
+//직접 작성 안해도 컴파일러가 알아서 만들어주는
+//복사생성자
+student :: student(const student& rhs)
+	:nHakbun(rhs.nHakbun), sName(rhs.sName)
+{}
+
 student :: ~student()
 	{
 		delete[]sName;	
@@ -46,8 +53,13 @@ void student::show() {
 }
 int main(void) {
 	
+	//일반 생성자 호출 출력
 	student stu1 = student(1111, "JWP");
+
+	//(1111, "JWP")가 복사됨 일반 생성자 호출X
+	student stu2 = stu1;
 	stu1.show();
+	stu2.show();
 
 
 
