@@ -1,35 +1,36 @@
 ﻿#include <iostream>
-#include <string>
+#include <string.h>
 
 using namespace std;
 
 class student {
 private:
 	int nHakbun;
-	string sName;
+	char* sName;
 
 public:
 	//생성자 : 객체가 생성되면 자동으로 호출되는 함수
 	//반환형을 갖고있지 않는다.
 	student();
-	student(int Hakbun, string Name);
+	student(int Hakbun, const char* Name);
 
 	void show();
 
 };
 student::student() {
-	this -> nHakbun = 1234;
-	this -> sName = "이사랑";
-	cout << "일반생성자 생성." << endl;
+	
 
 }
 //멤버변수를 초기화 할 수 있으며 따라서
 //const형 변수와 참조형 변수를 멤버변수로 할 수 있다
 
-student::student(int Hakbun, string Name)
-	:nHakbun(Hakbun), sName(Name) //멤버변수(매개변수)
+student::student(int Hakbun, const char* Name)
+	:nHakbun(Hakbun) //멤버변수(매개변수)
 {
-	cout << "일반생성자 생성." << endl;
+	cout << "일반생성자 호출." << endl;
+	int len = strlen(Name) + 1; //널때문에 하나 추가, 공간의 갯수 파악
+	sName = new char[len];		//갯수만큼 메모리 할당
+	strcpy(sName, Name);
 }
 
 void student::show() {
@@ -37,28 +38,10 @@ void student::show() {
 	cout << "이름은" << sName << "입니다" << endl << endl;
 }
 int main(void) {
-	/*student stu1 = student();
-	stu1.show();
-	*/
-
-	student* stu2 = new student[6];
-	for (int i = 0; i < 6; i++)
-		stu2[i].show();
-	delete []stu2;
-
-	/*int *ptr1 = new int;
-	*ptr1 = 20;
-	cout << ptr1 << endl <<  *ptr1 << endl;
 	
-	delete ptr1;*/
+	student stu1 = student(1111, "JWP");
+	stu1.show();
 
-	/*int* ptr2 = new int[4];
-	for (int i = 0; i < 4; i++)
-	{
-		ptr2[i] = 10 + i;
-		cout << ptr2[i] << " ";
-	}
-	delete []ptr2;*/
 
 
 	return 0;
