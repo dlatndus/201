@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C++기본\03-01 생성자.cpp">
+    <ClCompile Include="class.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
