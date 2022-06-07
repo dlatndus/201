@@ -15,10 +15,12 @@ public:
 	student(int Hakbun, const char* Name);
 	student(const student& rhs);
 	~student();
+	student& operator=(const student& rhs);
 
 	void show();
 
 };
+
 student::student() {
 
 
@@ -56,17 +58,29 @@ void student::show() {
 	cout << "학번은" << nHakbun << "입니다" << endl;
 	cout << "이름은" << sName << "입니다" << endl << endl;
 }
+
+//default 대입연산자
+student& student::operator=(const student& rhs)
+{
+	nHakbun = rhs.nHakbun;
+	sName = rhs.sName;
+
+	return *this;
+}
+
 int main(void) {
 
 	//일반 생성자 호출 출력
 	student stu1 = student(1111, "JWP");
+	student stu3 = student(2222, "JYP");
+	stu1.show(); //(1111, "JWP")
 
-	//(1111, "JWP")가 복사됨 일반 생성자 호출X
+	//(1111, "JWP")가 복사됨 일반 생성자 호출X 복사생성자 호출
 	student stu2 = stu1;
-	stu1.show();
-	stu2.show();
+	stu2.show(); //(1111, "JWP")
 
-
+	stu1 = stu3;
+	stu1.show(); //(2222, "JYP")
 
 	return 0;
 }
