@@ -20,6 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++기본\04-02 연산자 오버로딩%28연습문제%29.cpp" />
+    <ClCompile Include="C++기본\04-02.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C++기본\04-02.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

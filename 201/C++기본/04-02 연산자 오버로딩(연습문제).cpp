@@ -1,18 +1,7 @@
 #include <iostream>
+#include "04-02.h"
+
 using namespace std;
-
-class Integer {
-public:
-	Integer(void) {}
-	Integer(int v) : value(v) {}
-	
-	Integer operator+(const Integer& rhs);
-
-	void print();
-
-private:
-	int value;
-};
 
 int main(void)
 {
@@ -22,17 +11,4 @@ int main(void)
 	c.print();		// 3이 출력되도록
 	
 	return 0;
-}
-
-void Integer::print()
-{
-	cout << value << endl;
-}
-
-Integer Integer::operator+(const Integer& rhs)
-{
-	Integer temp;
-	temp.value = value + rhs.value;
-	
-	return temp;
 }
