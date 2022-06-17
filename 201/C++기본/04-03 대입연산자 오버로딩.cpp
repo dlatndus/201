@@ -31,7 +31,7 @@ student::student() {
 student::student(int Hakbun, const char* Name)
 	:nHakbun(Hakbun) //멤버변수(매개변수)
 {
-	cout << "일반생성자 호출." << endl;
+	cout << "student 일반생성자 호출." << endl;
 	int len = strlen(Name) + 1; //널때문에 하나 추가, 공간의 갯수 파악
 	sName = new char[len];		//갯수만큼 메모리 할당
 	strcpy(sName, Name);
@@ -42,7 +42,7 @@ student::student(int Hakbun, const char* Name)
 student::student(const student& rhs)
 	:nHakbun(rhs.nHakbun), sName(rhs.sName)
 {
-	cout << "일반생성자 호출." << endl;
+	cout << "student 일반생성자 호출." << endl;
 	int len = strlen(rhs.sName) + 1; //널때문에 하나 추가, 공간의 갯수 파악
 	sName = new char[len];		//갯수만큼 메모리 할당
 	strcpy(sName, rhs.sName);
@@ -51,7 +51,7 @@ student::student(const student& rhs)
 student :: ~student()
 {
 	delete[]sName;
-	cout << "소멸자 호출." << endl;
+	cout << "student 소멸자 호출." << endl;
 }
 
 void student::show() {
@@ -64,7 +64,7 @@ student& student::operator=(const student& rhs)
 {
 	nHakbun = rhs.nHakbun;
 
-	cout << "대입연산자 호출." << endl;
+	cout << "student 대입연산자 호출." << endl;
 	int len = strlen(rhs.sName) + 1; //널때문에 하나 추가, 공간의 갯수 파악
 	sName = new char[len];		//갯수만큼 메모리 할당
 	strcpy(sName, rhs.sName);
@@ -72,10 +72,24 @@ student& student::operator=(const student& rhs)
 	return *this;
 }
 
+class HighSchoolStudent : public student
+{
+public:
+	HighSchoolStudent(int Hakbun, const char* Name, bool isD)
+	: student(Hakbun, Name), isDormotory(isD){
+		cout << "highschoolstudent 생성자 호출." << endl;
+	}
+	~HighSchoolStudent() 
+	{
+		cout << "highschoolstudent 소멸자 호출." << endl;
+	}
+private:
+	bool isDormotory;
 
+};
 
 int main(void) {
-
+	/*
 	//일반 생성자 호출 출력
 	student stu1 = student(1111, "JWP");
 	student stu3 = student(2222, "JYP");
@@ -87,6 +101,10 @@ int main(void) {
 
 	stu1 = stu3;
 	stu1.show(); //(2222, "JYP")
+	*/
+
+	HighSchoolStudent hss = HighSchoolStudent(1111, "JWP", false);
+	hss.show();
 
 	return 0;
 }
