@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string.h>
+#include<string>
 
 using namespace std;
 
@@ -52,6 +53,10 @@ void student::show() {
 	cout << "이름은" << sName << "입니다" << endl << endl;
 }
 int main(void) {
+	string str1 = "123";
+	string str2 = "m_string123ab";
+	cout << (str1 == str2) << endl;
+	str1.size();
 	
 	//일반 생성자 호출 출력
 	student stu1 = student(1111, "JWP");
@@ -61,7 +66,7 @@ int main(void) {
 	stu1.show();
 	stu2.show();
 
-
+	
 
 	return 0;
 }

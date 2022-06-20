@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string.h>
+#include <string>
 
 using namespace std;
 
@@ -7,7 +8,7 @@ class student {
 private:
 	int nHakbun;
 	char* sName;
-
+	
 public:
 	//생성자 : 객체가 생성되면 자동으로 호출되는 함수
 	//반환형을 갖고있지 않는다.
