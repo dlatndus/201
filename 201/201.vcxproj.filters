@@ -15,10 +15,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="C++기본\string 클래스 연습.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="C++기본\03-01 생성자.cpp">
+=======
+    <ClCompile Include="genshin.cpp">
+>>>>>>> 0d2adc0589a21df56d6f7820eda484208583734f
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
