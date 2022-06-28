@@ -1,6 +1,4 @@
 #include <iostream>
-#include <cstring>
-
 using namespace std;
 
 class m_string
@@ -68,10 +66,10 @@ int m_string::length()
 
 int* m_string::c_str()
 {
-	int* asdf = new int;
+	char* asdf = new char;
+;	asdf = (char*)& _Myptr;
+	return (int*)asdf;
 
-	asdf = (int*)&_Myptr;
-	return asdf - 2;
 
 }
 
@@ -124,15 +122,7 @@ ostream& operator<< (ostream& os, const m_string& ms)
 	return os;
 }
 
-/*
-istream& operator>> (istream& is, m_string& _str)
-{
-	char str[100];
-	is >> str;
-	_str = m_string(str);
-	return is;
-}
-*/
+
 int main(void) {
 
 	m_string str1 = "123";
