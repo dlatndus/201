@@ -14,7 +14,7 @@ void main(void)
 	vector<int>  i3;
 	i3.reserve(10); // 백터의 공간은 10개
 
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		i1[i] = i;
 		i2[i] = i;
@@ -27,4 +27,9 @@ void main(void)
 
 	//자동으로 크기 ㅘㄱ장 후 삽입
 	i3.push_back(10);
+
+	//vector의 모든 원소를 출력
+	for (int i = 0; i < i3.size(); i++) {
+		cout << i3[i] << " ";
+	}
 }
