@@ -24,7 +24,12 @@ void main(void)
 	map<string, string>::iterator iter;
 	for (iter = ONEUS.begin(); iter != ONEUS.end(); iter++)
 		cout << iter->first << "은 " << iter->second << "이다" << endl; //key  v
+
+	//여환웅이란 key를 가지는 iterator
 	map<string, string>::iterator first_love = ONEUS.find("여환웅");
-	cout << "저의 최애는 " << first_love->second << endl;
+
+	//해당 key 가 존재하는지 체크
+	if(first_love != ONEUS.end())
+		cout << "저의 최애는 " << first_love->second << endl;
 
 }
