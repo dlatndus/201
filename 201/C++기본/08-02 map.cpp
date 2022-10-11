@@ -23,8 +23,8 @@ void main(void)
 
 	map<string, string>::iterator iter;
 	for (iter = ONEUS.begin(); iter != ONEUS.end(); iter++)
-		cout << (*iter).first << "은 " << (*iter).second << "이다" << endl; //key  v
+		cout << iter->first << "은 " << iter->second << "이다" << endl; //key  v
 	map<string, string>::iterator first_love = ONEUS.find("여환웅");
-	cout << "저의 최애는 " << (*first_love).second << endl;
+	cout << "저의 최애는 " << first_love->second << endl;
 
 }
