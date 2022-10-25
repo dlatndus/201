@@ -7,8 +7,8 @@ void main(void)
 {
 	int arr[4] = { 10, 20, 30, 40 };
 
-	for (int i = 0; i < 4; i++)
+	for (int x : arr)
 	{
-		cout << arr[i] << endl;
+		cout << x << endl;
 	}
 }
