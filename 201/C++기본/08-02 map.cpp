@@ -21,8 +21,8 @@ void main(void)
 	
 
 	//map<string, string>::iterator iter;
-	for (auto iter = ONEUS.begin(); iter != ONEUS.end(); iter++)
-		cout << iter->first << "은 " << iter->second << "이다" << endl; //key  v
+	for (auto& iter : ONEUS)
+		cout << iter.first << "은 " << iter.second << "이다" << endl; //key  v
 	cout << endl;
 
 	ONEUS.erase("손동주");
