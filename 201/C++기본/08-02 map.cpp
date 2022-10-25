@@ -20,8 +20,8 @@ void main(void)
 	ONEUS.insert(pair<string, string>("손동주", "시온"));
 	
 
-	map<string, string>::iterator iter;
-	for (iter = ONEUS.begin(); iter != ONEUS.end(); iter++)
+	//map<string, string>::iterator iter;
+	for (auto iter = ONEUS.begin(); iter != ONEUS.end(); iter++)
 		cout << iter->first << "은 " << iter->second << "이다" << endl; //key  v
 	cout << endl;
 
