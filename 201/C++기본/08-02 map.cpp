@@ -27,7 +27,7 @@ void main(void)
 
 	ONEUS.erase("손동주");
 
-	for (iter = ONEUS.begin(); iter != ONEUS.end(); iter++)
+	for (auto iter = ONEUS.begin(); iter != ONEUS.end(); iter++)
 		cout << iter->first << "은 " << iter->second << "이다" << endl; //key  v
 
 }
